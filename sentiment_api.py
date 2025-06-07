@@ -7,7 +7,7 @@ from transformers import pipeline
 app = Flask(__name__)
 
 # Inicjalizacja gotowego pipeline'u do analizy sentymentu
-sentiment_pipeline = pipeline("sentiment-analysis")
+sentiment_pipeline = pipeline("sentiment-analysis", model="./model", tokenizer="./model")
 
 def normalize_label(result):
     label = result['label']
